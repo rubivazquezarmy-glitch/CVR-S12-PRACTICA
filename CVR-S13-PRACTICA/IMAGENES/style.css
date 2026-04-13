@@ -1,0 +1,292 @@
+ @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    background-color: #161616;
+    overflow-x: hidden;
+}
+
+/* Header Styles */
+header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+header .logo {
+    color: #945cb4;
+    font-size: 2cm;
+    font-weight: 700;
+    text-decoration: none;
+    text-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+header .navbar {
+    display: flex;
+    gap: 30px;
+}
+
+header .navbar a {
+    position: relative;
+    display: flex;
+}
+
+header .navbar li {
+    list-style: none;
+    margin-left: 30px;
+}
+
+header .navbar li a {
+    text-decoration: none;
+    color: #945cb4;
+    font-weight: 600;
+    border-radius: 25%;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+header .navbar li a:hover {
+    border: 2px solid #744494;
+}
+
+/* Seccion Inicio */
+.inicio {
+    position: relative;
+    max-width: 630px;
+    height: 30vh;
+}
+
+.inicio .contenido {
+    position: relative;
+    right: -20%;
+    transform: translate(5%, 65%);
+    z-index: 1;
+}
+
+.inicio .contenido h1 {
+    color: #945cb4;
+    font-family: 'Rammetto One', cursive;
+    font-size: 3.2cm;
+    font-weight: 850;
+    margin-bottom: 5px;
+    text-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.inicio .contenido p {
+    color: #fff;
+    line-height: 1.5;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.inicio .contenido a {
+    color: #fff;
+    background-color: #744494;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: 0.1s;
+}
+
+.inicio .contenido a:hover {
+    color: #945cb4;
+    background: transparent;
+    border: 2px solid #945cb4;
+}
+
+.bgColor {
+    position: absolute;
+    filter: blur(150px);
+    opacity: 0.5;
+}
+
+.inicio .bgColor:nth-child(1) {
+    background: #945cb4;
+    top: -150px;
+    left: -110px;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+}
+
+.inicio .bgColor:nth-child(2) {
+    background: #945cb4;
+    top: 300px;
+    right: -750px;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+}
+
+.img8x {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.img8x img {
+    position: relative;
+    right: -870px;
+    top: -150px;
+    width: 400px;
+    animation: animate 10s linear infinite;
+}
+
+@keyframes animate {
+    0%, 100% {
+        transform: translateY(-30px);
+    }
+    50% {
+        transform: translateY(30px);
+    }
+}
+
+/* Seccion Categoria */
+.tituloCategorias {
+    position: relative;
+    width: 100%;
+    bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tituloCategorias h2 {
+    color: #945cb4;
+    font-family: 'Rammetto One', cursive;
+    font-size: 2.5cm;
+    font-weight: 800;
+    text-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.categorias .tienda {
+    position: relative;
+    top: -270px; /* CORREGIDO */
+    width: 100%;
+    height: 55vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 100px;
+    justify-content: space-between;
+    margin-top: 100px;
+    padding: 160px;
+}
+
+.categorias .tienda .card {
+    position: relative;
+    width: 250px;
+    height: 250px; /* CORREGIDO */
+    margin: 80px;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.categorias .tienda .card .contenidocard {
+    text-align: center;
+}
+
+.categorias .tienda .card .imgpeluche {
+    width: 200px;
+    height: 200px;
+    transform: rotate(25deg);
+    padding: 10px;
+}
+
+.categorias .tienda .card .imgfantasmita {
+    width: 190px;
+    height: 190px;
+    padding: 10px;
+}
+
+.categorias .tienda .card .imgmuerte {
+    width: 200px;
+    height: 200px;
+}
+
+.categorias .tienda .card .contenidocard span { /* CORREGIDO */
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #945cb4;
+    font-weight: 800;
+}
+
+.categorias .tienda .card .contenidocard p {
+    color: #fff;
+    font-weight: 600; /* CORREGIDO */
+}
+
+.categorias .tienda .card:hover {
+    background-color: rgba(114, 57, 114, 1);
+    transform: translateY(-20px);
+    cursor: pointer;
+}
+
+.categorias .bgColor:nth-child(1) {
+    background: #945cb4;
+    top: 1000px;
+    left: -150px;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+}
+
+/* Seccion Vendidos */
+.tituloVendidos {
+    position: relative;
+    bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tituloVendidos h2 {
+    color: #945cb4;
+    font-family: 'Rammetto One', cursive;
+    font-size: 2.5cm;
+    font-weight: 800;
+    text-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.vendidos {
+    position: relative;
+    width: 100%;
+    height: 65vh;
+}
+
+.vendidos .tienda {
+    position: relative;
+    top: -270px; /* CORREGIDO */
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 100px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+    padding: 160px;
+}
+
+.vendidos .tienda .card .contenidocard span { /* CORREGIDO */
+    font-size: 1.3em;
+    color: #945cb4;
+    font-weight: 800;
+}
